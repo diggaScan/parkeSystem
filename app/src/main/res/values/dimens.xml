@@ -7,4 +7,6 @@
 
     <!--ac_person_car_record-->
     <dimen name="bar_height">33dp</dimen>
+
+
 </resources>

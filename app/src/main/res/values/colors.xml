@@ -3,8 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-
+    <color name="color_primary_blue">#3485FF</color>
     <color name="divider_line_color">#dee6e6e6</color>
+
     <!--base_color-->
     <color name="white">#ffffff</color>
     <color name="yellow_white">#f8fffefb</color>
@@ -14,11 +15,37 @@
     <!--dialog_utils-->
     <color name="dialog_backgrounf">#a4313131</color>
     <color name="progress_gray">#aea6a6</color>
+
     <!--Amap-->
     <color name="fill">#3376d4f3</color>
     <color name="stroke">#cc3f91fc</color>
 
     <!--ac_function-->
     <color name="shiny_gray">#e3f1f1f1</color>
+
+    <!--car_status-->
+    <color name="car_approval">#f720d483</color>
+
+    <!--color_status-->
+    <color name="zero">#006400</color>
+    <color name="one">#008B45</color>
+    <color name="two">#00BFFF</color>
+    <color name="three">#00CDCD</color>
+    <color name="four">#00EE76</color>
+    <color name="five">#00FF00</color>
+    <color name="six">#98FB98</color>
+    <color name="seven">#9AC0CD</color>
+    <color name="eight">#9BCD9B</color>
+    <color name="nine">#9FB6CD</color>
+    <color name="ten">#A2B5CD</color>
+    <color name="ele">#A52A2A</color>
+    <color name="twe">#AAAAAA</color>
+    <color name="thir">#CD6839</color>
+    <color name="fourt">#CD8162</color>
+    <color name="fift">#CD919E</color>
+    <color name="sixt">#CD9B9B</color>
+    <color name="sevt">#CDB38B</color>
+    <color name="eighte">#CDBA96</color>
+
 
 </resources>

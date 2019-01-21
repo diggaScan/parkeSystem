@@ -6,47 +6,48 @@
     android:orientation="horizontal">
 
     <RelativeLayout
+        android:id="@+id/search_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
         <ImageView
-         android:layout_toLeftOf="@id/search"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/search"
             android:src="@drawable/ic_search_24dp" />
 
         <TextView
             android:id="@+id/search"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_centerInParent="true"
             android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
             android:gravity="center"
             android:text="搜索" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/filter_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
         <ImageView
-            android:layout_centerInParent="true"
-
-            android:layout_toLeftOf="@id/filter"
             android:layout_width="18dp"
             android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/filter"
             android:src="@drawable/ic_filter_24dp" />
 
         <TextView
             android:id="@+id/filter"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
             android:gravity="center"
             android:text="检索" />
     </RelativeLayout>

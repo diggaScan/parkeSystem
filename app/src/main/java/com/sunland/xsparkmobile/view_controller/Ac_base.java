@@ -1,6 +1,7 @@
 package com.sunland.xsparkmobile.view_controller;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.widget.FrameLayout;
 
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.Utils.DialogUtils;
+import com.sunland.xsparkmobile.Utils.VersionCheckUtils;
 
 import butterknife.ButterKnife;
 
@@ -78,5 +80,11 @@ public class Ac_base extends AppCompatActivity {
         startActivityForResult(intent, QR_REQUEST_CODE);
     }
 
+    public void showLightStatusBar(){
+        if (VersionCheckUtils.isAboveVersion(Build.VERSION_CODES.M)) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.yellow_white));
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+    }
 
 }

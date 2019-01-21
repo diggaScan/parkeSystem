@@ -44,6 +44,10 @@
         <activity android:name=".view_controller.toll_car.RouteNaviActivity" />
         <activity android:name=".view_controller.police.Ac_functions" />
         <activity android:name=".view_controller.police.Ac_person_car_record" />
+        <activity android:name=".view_controller.police.Ac_search_car_record" />
+        <activity android:name=".view_controller.police.Ac_filter" />
+        <activity android:name=".view_controller.police.Ac_my_request" />
+        <activity android:name=".view_controller.police.Ac_my_approval"></activity>
     </application>
 
 </manifest>

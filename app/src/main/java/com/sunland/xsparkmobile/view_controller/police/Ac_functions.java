@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.sunland.xsparkmobile.GlideApp;
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.view_controller.Ac_base;
+import com.sunland.xsparkmobile.view_controller.police.ev_adapters.Ac_function_rv_adapter;
 
 import butterknife.BindView;
 
@@ -56,10 +57,13 @@ public class Ac_functions extends Ac_base {
                         hopToActivity(Ac_person_car_record.class);
                         break;
                     case 1:
+                        hopToActivity(Ac_my_request.class);
                         break;
                     case 2:
+                        hopToActivity(Ac_my_approval.class);
                         break;
                     case 3:
+
                         break;
                     case 4:
                         startQrScan();

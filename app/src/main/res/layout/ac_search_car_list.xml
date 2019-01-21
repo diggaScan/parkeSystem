@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/shiny_gray">
+
+        <com.sunland.xsparkmobile.customView.CancelableEdit
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toLeftOf="@id/search_action"
+            android:background="@drawable/search_bar_bkg"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawableRight="@drawable/cancelable_button"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/search_cursor_shape"
+            android:textSize="@dimen/search_bar_size" />
+
+        <TextView
+            android:id="@+id/search_action"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="取消"
+            android:textColor="@color/color_primary_blue" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frg_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/car_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="浙A·T0903"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_tile" />
+
+        <TextView
+            android:id="@+id/record_id_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_num"
+            android:text="单号:  "
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/record_id_str"
+            android:layout_toRightOf="@id/record_id_str"
+            android:text="1653335"
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:id="@+id/time_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/record_id_str"
+            android:text="申请日期:  "
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/time_str"
+            android:layout_toRightOf="@id/time_str"
+            android:text="2019-12-03"
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_str"
+            android:layout_marginTop="10dp"
+            android:text="申请放行"
+            android:textColor="@color/car_approval"
+            android:textSize="@dimen/list_status_size" />
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="待审批..."
+            android:textColor="@color/ele"
+            android:textSize="@dimen/list_progress_size" />
+    </RelativeLayout>
+
+</LinearLayout>

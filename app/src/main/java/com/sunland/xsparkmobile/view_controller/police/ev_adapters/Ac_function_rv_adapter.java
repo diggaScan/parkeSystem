@@ -1,4 +1,4 @@
-package com.sunland.xsparkmobile.view_controller.police;
+package com.sunland.xsparkmobile.view_controller.police.ev_adapters;
 
 import android.content.Context;
 import android.content.res.Resources;

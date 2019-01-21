@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/enter_btn"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/top_banner"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_one"
+            android:gravity="center"
+            android:text="车辆状态" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_two"
+            android:gravity="center"
+            android:text="暂扣原因" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enter_btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary_blue"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</RelativeLayout>

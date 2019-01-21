@@ -10,4 +10,9 @@
     <dimen name="top_banner_title_size">18sp</dimen>
 
     <dimen name="list_tile">16dp</dimen>
+    <dimen name="list_detail">13sp</dimen>
+    <dimen name="list_status_size">15sp</dimen>
+    <dimen name="list_progress_size">20sp</dimen>
+    <dimen name="search_bar_size">12sp</dimen>
+
 </resources>
