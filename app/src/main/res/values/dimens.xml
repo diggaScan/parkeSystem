@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ac_function-->
+    <dimen name="img_bkg_height">150dp</dimen>
+    <dimen name="banner_height">70dp</dimen>
+    <dimen name="banner_title_height">80dp</dimen>
+
+    <!--ac_person_car_record-->
+    <dimen name="bar_height">33dp</dimen>
+</resources>

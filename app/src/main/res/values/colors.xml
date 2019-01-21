@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="divider_line_color">#dee6e6e6</color>
+    <!--base_color-->
+    <color name="white">#ffffff</color>
+    <color name="yellow_white">#f8fffefb</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#2d2d2d</color>
+
+    <!--dialog_utils-->
+    <color name="dialog_backgrounf">#a4313131</color>
+    <color name="progress_gray">#aea6a6</color>
+    <!--Amap-->
+    <color name="fill">#3376d4f3</color>
+    <color name="stroke">#cc3f91fc</color>
+
+    <!--ac_function-->
+    <color name="shiny_gray">#e3f1f1f1</color>
+
+</resources>

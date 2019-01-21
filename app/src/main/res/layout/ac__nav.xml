@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.amap.api.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/location_address_bkg"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:gravity="center_vertical"
+            android:hint="关键字搜索"
+            android:paddingLeft="12dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</FrameLayout>

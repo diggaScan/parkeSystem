@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp">
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/location_address_bkg"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:gravity="center_vertical"
+            android:hint="关键字搜索"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="36dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/nav_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_back" />
+    </FrameLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/back"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginBottom="2dp"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginTop="2dp"-->
+    <!--android:background="@drawable/back"-->
+    <!--android:scaleType="center"-->
+    <!--android:src="@drawable/ic_arrow_back" />-->
+
+    <!--<android.support.v7.widget.SearchView-->
+    <!--android:id="@+id/keyWord"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:imeOptions="actionSearch"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textColorHint="@color/white"-->
+    <!--app:queryHint="请输入关键字"-->
+    <!--app:searchIcon="@null" />-->
+    <!--</LinearLayout>-->
+
+    <ListView
+        android:id="@+id/inputtip_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+    </ListView>
+
+</LinearLayout>
