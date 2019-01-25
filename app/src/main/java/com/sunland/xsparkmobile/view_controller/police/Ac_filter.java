@@ -20,8 +20,6 @@ public class Ac_filter extends Ac_base {
     public RecyclerView rv_car_status;
     @BindView(R.id.type)
     public RecyclerView rv_car_type;
-    @BindView(R.id.banner_title)
-    public TextView tv_banner_title;
 
     private MyAdapter status_adapter;
     private MyAdapter type_adapter;
@@ -30,8 +28,8 @@ public class Ac_filter extends Ac_base {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentLayout(R.layout.ac_filter);
-        showToolBar(false);
-        tv_banner_title.setText("检索");
+        showToolBar(true);
+        setToolBarTitle("检索");
         initView();
     }
 

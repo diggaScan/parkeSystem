@@ -4,7 +4,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="color_primary_blue">#3485FF</color>
-    <color name="divider_line_color">#dee6e6e6</color>
+    <color name="divider_line_color">#def2f2f2</color>
+    <color name="bkg_gray">#d9d9d9</color>
+    <color name="tip_color">#cfcfcd</color>
 
     <!--base_color-->
     <color name="white">#ffffff</color>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_white"
+    android:orientation="vertical"
+    tools:context=".view_controller.police.Ac_request_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_margin="@dimen/detail_frame_padding"
+            android:id="@+id/name_circle"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/name_circle_bkg"
+            android:gravity="center"
+            android:text="建国"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="王建国" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/detail_frame_padding"
+        android:layout_marginRight="@dimen/detail_frame_padding"
+        android:layout_height="1dp"
+        android:background="@color/divider_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/action_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_white"
+        android:padding="@dimen/detail_frame_padding">
+
+        <TextView
+            android:id="@+id/request_id_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/detail_item_padding"
+            android:text="申请单号: " />
+
+        <TextView
+            android:id="@+id/request_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/request_id_str"
+            android:layout_toRightOf="@id/request_id_str"
+            android:text="1603764"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/dep_name_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/request_id"
+            android:padding="@dimen/detail_item_padding"
+            android:text="所属部门: " />
+
+        <TextView
+            android:id="@+id/dep_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/dep_name_str"
+            android:layout_toRightOf="@id/dep_name_str"
+            android:text="衙前中队"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/request_reason_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dep_name"
+            android:padding="@dimen/detail_item_padding"
+            android:text="申请理由: " />
+
+        <TextView
+            android:id="@+id/request_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/request_reason_str"
+            android:layout_toRightOf="@id/request_reason_str"
+            android:text="已达车辆放行标准"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/detail_frame_padding"
+        android:layout_marginRight="@dimen/detail_frame_padding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_cate_height"
+        android:background="@color/divider_line_color"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/icon_one"
+            android:background="@color/divider_line_color"
+            android:gravity="center"
+
+            android:text="  详情" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/implementee_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_white"
+        android:padding="@dimen/template_item_padding">
+
+        <TextView
+            android:id="@+id/onwer_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/detail_item_padding"
+            android:text="车辆单位或个人: " />
+
+        <TextView
+            android:id="@+id/owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/onwer_str"
+            android:layout_toRightOf="@id/onwer_str"
+            android:text="李详"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/car_num_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/onwer_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="车牌号码: " />
+
+        <TextView
+            android:id="@+id/car_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/car_num_str"
+            android:layout_toRightOf="@id/car_num_str"
+            android:text="苏A84293"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/car_type_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_num_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="车辆类型: " />
+
+        <TextView
+            android:id="@+id/car_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/car_type_str"
+            android:layout_toRightOf="@id/car_type_str"
+            android:text="重型自卸货车"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/num_type_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_type_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="车牌类型: " />
+
+        <TextView
+            android:id="@+id/num_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/num_type_str"
+            android:layout_toRightOf="@id/num_type_str"
+            android:text="大型汽车"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/record_id_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/num_type"
+            android:padding="@dimen/detail_item_padding"
+            android:text="移交单号: " />
+
+        <TextView
+            android:id="@+id/record_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/record_id_str"
+            android:layout_toRightOf="@id/record_id_str"
+            android:text="1603764"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/force_certi_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/record_id_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="强制处罚凭证号: " />
+
+        <TextView
+            android:id="@+id/force_certi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/force_certi_str"
+            android:layout_toRightOf="@id/force_certi_str"
+            android:text="3414216482"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/car_status_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/force_certi_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="车辆状态: " />
+
+        <TextView
+            android:id="@+id/car_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/car_status_str"
+            android:layout_toRightOf="@id/car_status_str"
+            android:text="停入"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/accident_id_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_status_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="事故编号: " />
+
+        <TextView
+            android:id="@+id/accident_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/accident_id_str"
+            android:layout_toRightOf="@id/accident_id_str"
+            android:text="1742222584"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/reason_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accident_id_str"
+            android:padding="@dimen/detail_item_padding"
+            android:text="扣车原因: " />
+
+        <TextView
+            android:id="@+id/reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/reason_str"
+            android:layout_toRightOf="@id/reason_str"
+            android:text="违法"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</LinearLayout>

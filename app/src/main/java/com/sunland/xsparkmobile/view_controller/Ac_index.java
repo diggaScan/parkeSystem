@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.sunland.xsparkmobile.R;
+import com.sunland.xsparkmobile.view_controller.parkManager.Ac_park_funciton;
 import com.sunland.xsparkmobile.view_controller.parkManager.Ac_qrscan_result;
 import com.sunland.xsparkmobile.view_controller.police.Ac_functions;
-import com.sunland.xsparkmobile.view_controller.toll_car.Ac_Nav;
+import com.sunland.xsparkmobile.view_controller.tow_car.Ac_Nav;
 
 public class Ac_index extends Ac_base {
 
@@ -36,12 +37,11 @@ public class Ac_index extends Ac_base {
                 hopToActivity(Ac_Nav.class);
                 break;
             case "2":
-                startQrScan();
+                hopToActivity(Ac_park_funciton.class);
                 break;
             case "3":
                 hopToActivity(Ac_functions.class);
                 break;
-
         }
     }
 

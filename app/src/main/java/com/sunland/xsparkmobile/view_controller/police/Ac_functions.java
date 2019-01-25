@@ -54,23 +54,23 @@ public class Ac_functions extends Ac_base {
             public void onItemClicked(int position) {
                 switch (position) {
                     case 0:
-                        hopToActivity(Ac_person_car_record.class);
+                        hopToActivity(Ac_force_certi_list.class);
                         break;
                     case 1:
-                        hopToActivity(Ac_my_request.class);
+                        hopToActivity(Ac_record_list.class);
                         break;
                     case 2:
-                        hopToActivity(Ac_my_approval.class);
+                        hopToActivity(Ac_request_list.class);
                         break;
                     case 3:
-
+                        hopToActivity(Ac_approval_list.class);
                         break;
                     case 4:
-                        startQrScan();
+                        hopToActivity(Ac_search_car_record.class);
                         break;
                     case 5:
+                        startQrScan(0);
                         break;
-
                 }
             }
         });
@@ -79,7 +79,7 @@ public class Ac_functions extends Ac_base {
         rv__functions.setAdapter(adapter);
 
         // TODO: 2019/1/18/018 debug content
-        String debug_content = "暂扣车辆" + "<font color=\"#ff884d\">  浙AE17789  </font>"
+        String debug_content = "暂扣车辆" + "<font color=\"#ff884d\">  浙AE1789  </font>"
                 + "放行申请 " + "<font color=\"#00e600\">   已通过  </font>";
         tv_banner_content.setText(Html.fromHtml(debug_content));
     }

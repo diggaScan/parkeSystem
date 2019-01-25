@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.Utils.DialogUtils;
@@ -22,19 +24,34 @@ public class Ac_base extends AppCompatActivity {
     private Toolbar base_toolbar;
     private FrameLayout base_container;
     private LayoutInflater layoutInflater;
-
+    private TextView tv_banner_title;
     public DialogUtils dialogUtils;
+    public ImageButton ib_nav_back;
+    public TextView tv_option_text;
+    public ImageButton ib_option_view;
     public final int QR_REQUEST_CODE = 0;
 
+    public boolean isInit=true;//activity是否为初始化状态
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_base);
         base_toolbar = findViewById(R.id.base_toolbar);
         base_container = findViewById(R.id.base_container);
+        tv_banner_title = findViewById(R.id.banner_title);
+        ib_nav_back = findViewById(R.id.nav_back);
+        ib_nav_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        tv_option_text = findViewById(R.id.option_text);
+        ib_option_view = findViewById(R.id.option_image);
+
         setSupportActionBar(base_toolbar);
         layoutInflater = getLayoutInflater();
-
         dialogUtils = DialogUtils.getInstance();
     }
 
@@ -43,6 +60,9 @@ public class Ac_base extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    public void setToolBarTitle(String title) {
+        tv_banner_title.setText(title);
+    }
 
     public void showToolBar(boolean show) {
         if (show) {
@@ -51,6 +71,7 @@ public class Ac_base extends AppCompatActivity {
             base_toolbar.setVisibility(View.GONE);
         }
     }
+
 
     public void hopToActivity(Class<? extends AppCompatActivity> clazz) {
         Intent intent = new Intent(this, clazz);
@@ -74,13 +95,13 @@ public class Ac_base extends AppCompatActivity {
         startActivityForResult(intent, request_code);
     }
 
-    public void startQrScan() {
+    public void startQrScan(int requestCode) {
         Intent intent = new Intent();
         intent.setAction("com.sunland.QR_SCAN");
-        startActivityForResult(intent, QR_REQUEST_CODE);
+        startActivityForResult(intent, requestCode);
     }
 
-    public void showLightStatusBar(){
+    public void showLightStatusBar() {
         if (VersionCheckUtils.isAboveVersion(Build.VERSION_CODES.M)) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.yellow_white));
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);

@@ -36,7 +36,7 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:id="@+id/toll_car_num"
+            android:id="@+id/tow_car_num"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toll_car_num"
+            android:layout_below="@id/tow_car_num"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
@@ -65,7 +65,6 @@
         android:elevation="60dp"
         android:gravity="center"
         android:padding="8dp"
-        android:text="再扫一辆" />
-
+        android:text="点击查看车辆详情" />
 
 </RelativeLayout>

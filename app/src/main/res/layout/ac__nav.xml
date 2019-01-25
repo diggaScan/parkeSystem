@@ -11,16 +11,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="5dp">
 
         <TextView
+
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/location_address_bkg"
             android:drawableLeft="@drawable/ic_search_black_24dp"
             android:gravity="center_vertical"
@@ -29,4 +31,21 @@
             android:textColor="@color/black"
             android:textSize="15sp" />
     </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/map_deco_bkg"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/task_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_document" />
+    </FrameLayout>
 </FrameLayout>

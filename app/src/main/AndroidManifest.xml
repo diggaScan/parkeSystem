@@ -17,9 +17,8 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_parking"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
@@ -38,16 +37,30 @@
 
         <activity android:name=".view_controller.Ac_base" />
         <activity android:name=".view_controller.Ac_index" />
-        <activity android:name=".view_controller.toll_car.Ac_Nav" />
+        <activity android:name=".view_controller.tow_car.Ac_Nav" />
         <activity android:name=".view_controller.parkManager.Ac_qrscan_result" />
-        <activity android:name=".view_controller.toll_car.Ac_address_tips" />
-        <activity android:name=".view_controller.toll_car.RouteNaviActivity" />
+        <activity android:name=".view_controller.tow_car.Ac_address_tips" />
+        <activity android:name=".view_controller.tow_car.RouteNaviActivity" />
         <activity android:name=".view_controller.police.Ac_functions" />
-        <activity android:name=".view_controller.police.Ac_person_car_record" />
+        <activity
+            android:name=".view_controller.police.Ac_record_list"
+            android:launchMode="singleTask" />
         <activity android:name=".view_controller.police.Ac_search_car_record" />
         <activity android:name=".view_controller.police.Ac_filter" />
-        <activity android:name=".view_controller.police.Ac_my_request" />
-        <activity android:name=".view_controller.police.Ac_my_approval"></activity>
+        <activity android:name=".view_controller.police.Ac_request_list" />
+        <activity android:name=".view_controller.police.Ac_approval_list" />
+        <activity android:name=".view_controller.police.Ac_record_detail" />
+        <activity android:name=".view_controller.police.Ac_record_editor" />
+        <activity android:name=".view_controller.police.Ac_request_detail" />
+        <activity android:name=".view_controller.police.Ac_approval_detail" />
+        <activity android:name=".view_controller.police.Ac_force_certi_list" />
+        <activity android:name=".view_controller.police.Ac_force_certi_detail" />
+        <activity android:name=".view_controller.police.Ac_force_certi_editor" />
+        <activity
+            android:name=".view_controller.parkManager.Ac_park_funciton"
+            android:launchMode="singleTask" />
+        <activity android:name=".view_controller.tow_car.Ac_task_list" />
+        <activity android:name=".view_controller.police.Ac_tow_car_position"></activity>
     </application>
 
 </manifest>

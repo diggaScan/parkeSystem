@@ -30,8 +30,9 @@ public class Ac_function_rv_adapter extends RecyclerView.Adapter<Ac_function_rv_
         this.context = context;
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.resource = context.getResources();
-        this.item_height = (int) (WindowInfoUtils.getWindowMetrics(context).heightPixels - resource.getDimension(R.dimen.img_bkg_height) - WindowInfoUtils.getStatusBarHeight(context) - resource.getDimension(R.dimen.banner_text_size)
-                - WindowInfoUtils.getNavigationBarHeight(context)) / 3;
+        int img_bkg_height = (int) resource.getDimension(R.dimen.img_bkg_height);
+        int banner_title_height = (int) resource.getDimension(R.dimen.banner_title_height);
+        this.item_height = (int) (WindowInfoUtils.getWindowMetrics(context).heightPixels -img_bkg_height-banner_title_height  )/ 3;
 
     }
 

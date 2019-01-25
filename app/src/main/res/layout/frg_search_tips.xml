@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_gravity="center"
-                android:background="@color/black" />
+                android:background="@color/tip_color" />
         </LinearLayout>
 
 
@@ -32,7 +32,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
-            android:text="搜索字段" />
+            android:text="搜索字段"
+            android:textColor="@color/tip_color" />
 
         <LinearLayout
             android:layout_width="100dp"
@@ -45,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_gravity="center"
-                android:background="@color/black" />
+                android:background="@color/tip_color" />
         </LinearLayout>
 
 
@@ -62,13 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_search_24dp" />
+                android:src="@drawable/ic_123_numbers" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="车牌号码" />
+                android:text="车牌号码"
+                android:textColor="@color/tip_color" />
         </LinearLayout>
 
         <LinearLayout
@@ -87,14 +89,15 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
-                android:src="@drawable/ic_search_24dp" />
+                android:src="@drawable/ic_paper_num" />
 
             <TextView
                 android:id="@+id/date_str"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="日期" />
+                android:text="移送单号"
+                android:textColor="@color/tip_color" />
         </LinearLayout>
 
         <LinearLayout
@@ -110,13 +113,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_search_24dp" />
+                android:src="@drawable/ic_force_certi" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="车牌号码" />
+                android:text="签字凭证号"
+                android:textColor="@color/tip_color" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

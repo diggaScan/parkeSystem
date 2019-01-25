@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/name_circle"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/name_circle_bkg"
+        android:gravity="center"
+        android:text="建国"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/car_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="浙A·T0903"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_tile" />
+
+        <TextView
+            android:id="@+id/location_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_num"
+            android:text="地点:  "
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/location_str"
+            android:layout_toRightOf="@id/location_str"
+            android:text="浙江国贸大厦"
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:id="@+id/reason_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_str"
+            android:text="车辆类型:  "
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/reason_str"
+            android:layout_toRightOf="@id/reason_str"
+            android:text="重型自卸货车"
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:id="@+id/time_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reason_str"
+            android:text="扣留日期:  "
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/time_str"
+            android:layout_toRightOf="@id/time_str"
+            android:text="2019-12-03 11:25:33"
+            android:textSize="@dimen/list_detail" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_str"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/list_status_size" />
+
+    </RelativeLayout>
+        <TextView
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="25dp"
+            android:id="@+id/accept"
+            android:layout_width="52dp"
+            android:layout_height="34dp"
+            android:background="@drawable/tow_car_accept_btn_bkg"
+            android:gravity="center"
+            android:text="接受"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </FrameLayout>
+</LinearLayout>

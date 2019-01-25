@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.customView.LoadTip;
 
@@ -304,7 +303,7 @@ public class DialogUtils {
         successLoad.setLayoutParams(lp);
         icon_container.addView(successLoad);
         cancel_button.setText("确定");
-        cancel_button.setOnClickListener(confirmListener);
+        cancel_button.setOnClickListener(cancelListener);
         mTextView.setText(tips);
         successLoad.setAutoDismiss(isDismiss);
         successLoad.startAnim(mDialog);

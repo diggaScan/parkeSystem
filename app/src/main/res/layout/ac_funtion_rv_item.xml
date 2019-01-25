@@ -8,16 +8,18 @@
         android:id="@+id/function_icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
-        android:textColor="@color/black"
-        android:textSize="@dimen/module_text_size"
         android:id="@+id/functio_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/function_icon"
+        android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/module_text_size" />
 
 </RelativeLayout>

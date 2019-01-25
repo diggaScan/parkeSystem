@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.sunland.xsparkmobile.Bean.CarStatus;
@@ -21,6 +22,7 @@ public class Car_info_list_adapter extends RecyclerView.Adapter<Car_info_list_ad
     private List<CarStatus> dataSet;
     private LayoutInflater layoutInflater;
     private Resources resources;
+    private OnItemClickedListener onItemClickedListener;
 
     public Car_info_list_adapter(Context context, List<CarStatus> dataSet) {
         super();
@@ -28,6 +30,10 @@ public class Car_info_list_adapter extends RecyclerView.Adapter<Car_info_list_ad
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.dataSet = dataSet;
         this.resources = context.getResources();
+    }
+
+    public void setOnItemClickedListener(OnItemClickedListener onItemClickedListener) {
+        this.onItemClickedListener = onItemClickedListener;
     }
 
     @NonNull
@@ -38,10 +44,18 @@ public class Car_info_list_adapter extends RecyclerView.Adapter<Car_info_list_ad
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Car_info_list_adapter.MyViewholder myViewholder, int i) {
+    public void onBindViewHolder(@NonNull Car_info_list_adapter.MyViewholder myViewholder, final int i) {
         int status = dataSet.get(i).getStatus();
         myViewholder.tv_status.setText(DataModel.STATUS[status]);
         myViewholder.tv_status.setTextColor(resources.getColor(DataModel.STATUS_COLORS[status]));
+        myViewholder.rl_content_container.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemClickedListener != null) {
+                    onItemClickedListener.onClick(i);
+                }
+            }
+        });
     }
 
     @Override
@@ -51,10 +65,12 @@ public class Car_info_list_adapter extends RecyclerView.Adapter<Car_info_list_ad
 
     class MyViewholder extends RecyclerView.ViewHolder {
         TextView tv_status;
+        RelativeLayout rl_content_container;
 
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
             tv_status = itemView.findViewById(R.id.status);
+            rl_content_container = itemView.findViewById(R.id.content_container);
         }
     }
 

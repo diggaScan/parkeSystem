@@ -18,8 +18,6 @@ import butterknife.OnClick;
 
 public class Ac_search_car_record extends Ac_base {
 
-    @BindView(R.id.banner_title)
-    public TextView tv_banner_title;
     @BindView(R.id.search_bar)
     public CancelableEdit ce_search_bar;
     @BindView(R.id.frg_container)
@@ -35,8 +33,8 @@ public class Ac_search_car_record extends Ac_base {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentLayout(R.layout.ac_search_car_list);
-        showToolBar(false);
-        tv_banner_title.setText("搜索");
+        showToolBar(true);
+        setToolBarTitle("搜索");
         initView();
     }
 
