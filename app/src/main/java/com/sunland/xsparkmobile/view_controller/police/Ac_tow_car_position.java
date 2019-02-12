@@ -16,10 +16,11 @@ import com.sunland.xsparkmobile.view_controller.Ac_base;
 
 import butterknife.BindView;
 
-public class Ac_tow_car_position extends Ac_base {
+public class Ac_tow_car_position extends Ac_base implements AMap.OnMapLoadedListener {
 
     @BindView(R.id.map)
     public MapView mMapView;
+    private AMap aMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,17 @@ public class Ac_tow_car_position extends Ac_base {
         showToolBar(false);
 
         mMapView.onCreate(savedInstanceState);// 此方法必须重写
-        AMap aMap = mMapView.getMap();
+        aMap = mMapView.getMap();
+        aMap.setOnMapLoadedListener(this);
+
+    }
+
+    @Override
+    public void onMapLoaded() {
         LatLng curLatLng = new LatLng(30.1908191706, 120.2854442596);
         aMap.moveCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition(curLatLng, 18f, 0, 0)));
         BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.ac_function_banner_bkg));
-
+                R.drawable.ic_tow_truck));
         aMap.addMarker(new MarkerOptions().position(curLatLng).title("拖车").snippet("浙A·TC179")
                 .icon(bitmapDescriptor));
     }

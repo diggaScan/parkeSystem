@@ -35,12 +35,15 @@ public class Ac_index extends Ac_base {
         switch (auth) {
             case "1":
                 hopToActivity(Ac_Nav.class);
+                finish();
                 break;
             case "2":
                 hopToActivity(Ac_park_funciton.class);
+                finish();
                 break;
             case "3":
                 hopToActivity(Ac_functions.class);
+                finish();
                 break;
         }
     }

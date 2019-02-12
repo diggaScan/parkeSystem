@@ -1,9 +1,12 @@
 package com.sunland.xsparkmobile.view_controller.police;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.widget.LinearLayoutManager;
+import android.provider.MediaStore;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,6 +22,9 @@ import com.sunland.xsparkmobile.V_Config;
 import com.sunland.xsparkmobile.view_controller.Ac_base;
 import com.sunland.xsparkmobile.view_controller.parkManager.Ac_park_funciton;
 import com.sunland.xsparkmobile.view_controller.police.ev_adapters.Img_adapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -47,7 +53,7 @@ public class Ac_record_editor extends Ac_base {
 
     @BindView(R.id.imgs)
     public RecyclerView rv_imgs;//车辆照片
-    private Img_adapter img_adapter;
+
 
     private int action_og_height;
     private int car_og_height;
@@ -60,6 +66,9 @@ public class Ac_record_editor extends Ac_base {
 
     private CollapseExpandAnimManager collapseExpandAnimManager;
     private RotateAnimationManager rotateAnimationManager;
+
+    private List<Bitmap> bitmapList;
+    private Img_adapter img_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,15 +114,37 @@ public class Ac_record_editor extends Ac_base {
     private void initView() {
         if (hop_source == V_Config.CREATE_NEW_RECORD) {
             setToolBarTitle("信息录入");
+
         } else if (hop_source == V_Config.SUPPLEMENT_RECORD) {
             setToolBarTitle("信息补录");
+        } else {
+            setToolBarTitle("信息补录");
         }
-        img_adapter=new Img_adapter(this,null);
-        rv_imgs.setAdapter(img_adapter);
-        LinearLayoutManager llm=new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
-        rv_imgs.setLayoutManager(llm);
+        bitmapList = new ArrayList<>();
+        img_adapter = new Img_adapter(this, bitmapList);
+        img_adapter.setOnItemDeleteClickedListener(new Img_adapter.OnItemDeleteClickedListener() {
+            @Override
+            public void onDelete(int position) {
+                bitmapList.remove(position - 1);
+                img_adapter.notifyItemRemoved(position);
+            }
+        });
+        img_adapter.setOnItemClickedListener(new Img_adapter.OnItemClickedListener() {
+            @Override
+            public void onItemClicked(int position, boolean isAdd) {
+                if (isAdd) {
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivityForResult(intent, V_Config.REQUEST_IMG);
+                    }
+                }
+            }
+        });
 
+        rv_imgs.setAdapter(img_adapter);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4);
+        rv_imgs.setLayoutManager(gridLayoutManager);
     }
 
     @OnClick({R.id.submit, R.id.action_cate_title, R.id.car_cate_title, R.id.police_cate_title})
@@ -160,6 +191,7 @@ public class Ac_record_editor extends Ac_base {
                     collapseExpandAnimManager.start(rl_car_detail, CollapseExpandAnimManager.EXPAND);
                     hasCarCollapse = false;
                 } else {
+                    img_adapter.clearStatus();
                     rotateAnimationManager.start(iv_car_person_info_arrow, RotateAnimationManager.COLLAPSE);
                     collapseExpandAnimManager.start(rl_car_detail, CollapseExpandAnimManager.COLLAPSE);
                     hasCarCollapse = true;
@@ -176,7 +208,20 @@ public class Ac_record_editor extends Ac_base {
                     hasThroughCollapse = true;
                 }
                 break;
+        }
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == V_Config.REQUEST_IMG) {
+            if (resultCode == RESULT_OK) {
+                Bundle bundle = data.getExtras();
+                Bitmap bitmap = (Bitmap) bundle.get("data");
+                bitmapList.add(bitmap);
+                img_adapter.notifyItemChanged(bitmapList.size());
+                rv_imgs.requestFocus();
+            }
         }
     }
 }

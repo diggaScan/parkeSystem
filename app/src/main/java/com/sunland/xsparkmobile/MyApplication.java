@@ -6,5 +6,6 @@ public class MyApplication extends CrashApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
     }
 }

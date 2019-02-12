@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.sunland.xsparkmobile.Bean.Request;
 import com.sunland.xsparkmobile.R;
 
 import java.util.List;

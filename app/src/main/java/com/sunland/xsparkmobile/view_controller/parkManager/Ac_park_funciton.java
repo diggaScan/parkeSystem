@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.sunland.xsparkmobile.R;
+import com.sunland.xsparkmobile.V_Config;
 import com.sunland.xsparkmobile.view_controller.Ac_base;
 import com.sunland.xsparkmobile.view_controller.police.Ac_search_car_record;
 import com.sunland.xsparkmobile.view_controller.police.ev_adapters.Ac_function_rv_adapter;

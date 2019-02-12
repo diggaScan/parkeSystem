@@ -18,7 +18,6 @@ public class Ac_task_list extends Ac_base {
     public RecyclerView rv_task_list;
 
 
-
     private Task_list_adapter task_list_adapter;
 
     @Override

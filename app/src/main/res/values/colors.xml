@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="color_primary_blue">#3485FF</color>
     <color name="divider_line_color">#def2f2f2</color>
+    <color name="dark_divider_line_color">#decfcfcf</color>
     <color name="bkg_gray">#d9d9d9</color>
     <color name="tip_color">#cfcfcd</color>
 
@@ -49,5 +50,21 @@
     <color name="sevt">#CDB38B</color>
     <color name="eighte">#CDBA96</color>
 
+    <!--dialogUtils2-->
+    <color name="med_color_primary">#3574bd</color>
+    <color name="divider_color">#f4f3f3</color>
+    <color name="red">#ff0000</color>
+
+    <!--Ac_filter-->
+    <color name="tab_bkg_color">#e9eef1f4</color>
+
+    <!--google_four_color-->
+    <color name="google_color_one">#3369e8</color>
+    <color name="google_color_two">#569925</color>
+    <color name="google_color_three">#d50f25</color>
+    <color name="google_color_four">#eeb211</color>
+
+    <color name="light_google_color_one">#ceb8c3dc</color>
+    <color name="light_google_color_two">#c6c9deba</color>
 
 </resources>

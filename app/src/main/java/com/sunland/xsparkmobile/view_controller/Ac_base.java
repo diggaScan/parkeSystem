@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.Utils.DialogUtils;
+import com.sunland.xsparkmobile.Utils.DialogUtils2;
 import com.sunland.xsparkmobile.Utils.VersionCheckUtils;
 
 import butterknife.ButterKnife;
@@ -26,12 +27,15 @@ public class Ac_base extends AppCompatActivity {
     private LayoutInflater layoutInflater;
     private TextView tv_banner_title;
     public DialogUtils dialogUtils;
+    public DialogUtils2 dialogUtils2;
     public ImageButton ib_nav_back;
     public TextView tv_option_text;
     public ImageButton ib_option_view;
     public final int QR_REQUEST_CODE = 0;
 
-    public boolean isInit=true;//activity是否为初始化状态
+    public boolean isInit = true;//activity是否为初始化状态
+    public int hop_src;//跳入该页面的来源
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +57,7 @@ public class Ac_base extends AppCompatActivity {
         setSupportActionBar(base_toolbar);
         layoutInflater = getLayoutInflater();
         dialogUtils = DialogUtils.getInstance();
+        dialogUtils2 = DialogUtils2.getInstance();
     }
 
     public void setContentLayout(int layout) {

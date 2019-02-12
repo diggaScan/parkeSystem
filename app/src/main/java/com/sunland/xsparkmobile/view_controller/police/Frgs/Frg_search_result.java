@@ -11,9 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sunland.xsparkmobile.Bean.CarStatus;
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.Utils.Rv_Item_decoration;
+import com.sunland.xsparkmobile.view_controller.Ac_base;
+import com.sunland.xsparkmobile.view_controller.police.Ac_record_detail;
 import com.sunland.xsparkmobile.view_controller.police.ev_adapters.Car_info_list_adapter;
 
 import java.util.ArrayList;
@@ -62,11 +63,16 @@ public class Frg_search_result extends Fragment {
         dataSet.add(new CarStatus(11));
         dataSet.add(new CarStatus(11));
         dataSet.add(new CarStatus(11));
-        car_info_list_adapter = new Car_info_list_adapter(mContext,dataSet);
+        car_info_list_adapter = new Car_info_list_adapter(mContext, dataSet);
+
+        car_info_list_adapter.setOnItemClickedListener(new Car_info_list_adapter.OnItemClickedListener() {
+            @Override
+            public void onClick(int position) {
+                ((Ac_base) mContext).hopToActivity(Ac_record_detail.class);
+            }
+        });
         rv_car_records.setAdapter(car_info_list_adapter);
         rv_car_records.setLayoutManager(new LinearLayoutManager(mContext));
         rv_car_records.addItemDecoration(new Rv_Item_decoration(mContext));
     }
-
-
 }

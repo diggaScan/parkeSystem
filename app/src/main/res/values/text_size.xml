@@ -17,4 +17,8 @@
 
     <dimen name="template_item_size">15sp</dimen>
 
+    <dimen name="bottom_bar_text_size">12sp</dimen>
+    <dimen name="enter_text_size">14sp</dimen>
+    <dimen name="filter_tab_text_size">12sp</dimen>
+
 </resources>

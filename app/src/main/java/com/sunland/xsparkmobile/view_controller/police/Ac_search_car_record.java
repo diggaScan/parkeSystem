@@ -1,5 +1,6 @@
 package com.sunland.xsparkmobile.view_controller.police;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -35,8 +36,20 @@ public class Ac_search_car_record extends Ac_base {
         setContentLayout(R.layout.ac_search_car_list);
         showToolBar(true);
         setToolBarTitle("搜索");
+        handleIntent();
         initView();
     }
+
+    private void handleIntent() {
+        Intent intent = getIntent();
+        if (intent != null) {
+            Bundle bundle = intent.getBundleExtra("bundle");
+            if (bundle != null) {
+                hop_src = bundle.getInt("hop_source");
+            }
+        }
+    }
+
 
     private void initView() {
         showLightStatusBar();

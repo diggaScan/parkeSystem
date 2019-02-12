@@ -22,7 +22,7 @@ public class Ac_force_certi_detail extends Ac_base {
     private void initView() {
         setToolBarTitle("强制凭证详情");
         tv_option_text.setVisibility(View.VISIBLE);
-        tv_option_text.setText("编辑");
+        tv_option_text.setText("转拖车");
 
     }
 

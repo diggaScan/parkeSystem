@@ -62,13 +62,15 @@ public class Ac_qrscan_result extends Ac_base {
 
         if (request_kind == Ac_park_funciton.REQUEST_DRIVE_IN) {
             tv_scan_result.setText("完成车辆进场扫描");
+            tv_enter_time.setText("进场时间:" + date);
         } else if (request_kind == Ac_park_funciton.REQUEST_DRIVE_OUT) {
             tv_scan_result.setText("完成车辆驶离扫描");
+            tv_enter_time.setText("出场时间:" + date);
         }
         switch (result) {
             case "1"://扫描成功
                 iv_result_icon.setImageResource(R.drawable.ic_tick);
-                tv_enter_time.setText("进场时间:" + date);
+
                 tv_toll_car_num.setText("拖车号牌:" + "浙ATC110");
                 tv_event_id.setText("移送单号:Z201900177");
 

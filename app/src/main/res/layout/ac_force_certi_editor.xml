@@ -789,8 +789,8 @@
                     <ImageView
                         android:scaleType="center"
                         android:src="@drawable/ic_plus"
-                        android:layout_width="@dimen/template_pic_size"
-                        android:layout_height="@dimen/template_pic_size"
+                        android:layout_width="@dimen/template_pic_width"
+                        android:layout_height="@dimen/template_pic_height"
                         android:layout_margin="@dimen/template_item_padding"
                         android:background="@color/divider_line_color" />
 

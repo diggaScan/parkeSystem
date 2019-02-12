@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sunland.xsparkmobile.GlideApp;
 import com.sunland.xsparkmobile.R;
@@ -28,6 +30,8 @@ public class Ac_functions extends Ac_base {
 
     @BindView(R.id.banner_content)
     public TextView tv_banner_content;
+
+    private int backPressed_num=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +95,22 @@ public class Ac_functions extends Ac_base {
             if (resultCode == RESULT_OK) {
 
             }
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressed_num != 1) {
+            backPressed_num++;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    backPressed_num--;
+                }
+            }, 2500);
+            Toast.makeText(this, "再按一次，退出应用", Toast.LENGTH_SHORT).show();
+        } else {
+            finish();
         }
     }
 }

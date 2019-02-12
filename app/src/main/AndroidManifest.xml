@@ -14,6 +14,10 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -21,6 +25,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view_controller.Ac_setting"></activity>
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="0a53968eb73064217d716d695160ab81" />
@@ -47,10 +53,16 @@
             android:launchMode="singleTask" />
         <activity android:name=".view_controller.police.Ac_search_car_record" />
         <activity android:name=".view_controller.police.Ac_filter" />
-        <activity android:name=".view_controller.police.Ac_request_list" />
-        <activity android:name=".view_controller.police.Ac_approval_list" />
+        <activity
+            android:name=".view_controller.police.Ac_request_list"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view_controller.police.Ac_approval_list"
+            android:launchMode="singleTask" />
         <activity android:name=".view_controller.police.Ac_record_detail" />
-        <activity android:name=".view_controller.police.Ac_record_editor" />
+        <activity
+            android:name=".view_controller.police.Ac_record_editor"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".view_controller.police.Ac_request_detail" />
         <activity android:name=".view_controller.police.Ac_approval_detail" />
         <activity android:name=".view_controller.police.Ac_force_certi_list" />
@@ -60,7 +72,7 @@
             android:name=".view_controller.parkManager.Ac_park_funciton"
             android:launchMode="singleTask" />
         <activity android:name=".view_controller.tow_car.Ac_task_list" />
-        <activity android:name=".view_controller.police.Ac_tow_car_position"></activity>
+        <activity android:name=".view_controller.police.Ac_tow_car_position" />
     </application>
 
 </manifest>

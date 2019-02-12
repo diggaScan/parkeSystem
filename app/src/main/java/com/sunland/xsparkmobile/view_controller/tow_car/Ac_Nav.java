@@ -78,12 +78,12 @@ public class Ac_Nav extends Ac_base implements AMapLocationListener, AMap.InfoWi
     @OnClick({R.id.task_icon, R.id.address})
     public void OnClick(View view) {
         int id = view.getId();
+        Bundle bundle = new Bundle();
         switch (id) {
             case R.id.task_icon:
                 hopToActivityForResult(Ac_task_list.class, REQUEST_ADDRESS_CODE);
                 break;
             case R.id.address:
-                Bundle bundle = new Bundle();
                 bundle.putString("city_code", city_code);
                 hopToActivityForResult(Ac_address_tips.class, bundle, REQUEST_ADDRESS_CODE);
                 break;
@@ -153,7 +153,7 @@ public class Ac_Nav extends Ac_base implements AMapLocationListener, AMap.InfoWi
     private void doPoiSearch(String keyword) {
         query = new PoiSearch.Query(keyword, "", city_code);
         query.setPageNum(1);
-        query.setPageSize(10);
+        query.setPageSize(1);
         mPoiSearch = new PoiSearch(this, query);
         mPoiSearch.setOnPoiSearchListener(new PoiSearch.OnPoiSearchListener() {
             @Override
@@ -213,8 +213,8 @@ public class Ac_Nav extends Ac_base implements AMapLocationListener, AMap.InfoWi
             mPoiMarker.setPosition(markerPosition);
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(markerPosition, 17));
         }
-//        mPoiMarker.setTitle(tip.getName());
-//        mPoiMarker.setSnippet(tip.getAddress());
+        mPoiMarker.setTitle(tip.getName());
+        mPoiMarker.setSnippet(tip.getAddress());
     }
 
 
@@ -234,11 +234,11 @@ public class Ac_Nav extends Ac_base implements AMapLocationListener, AMap.InfoWi
                     Tip tip = data.getParcelableExtra(Constants.EXTRA_TIP);
                     tv_address.setText(tip.getName() + tip.getAddress());
                     String id = tip.getPoiID();
-                    if (id == null || id.isEmpty()) {
-                        doPoiSearch(tip.getName());
-                    } else {
-                        addTipMarker(tip);
-                    }
+//                    if (id == null || id.isEmpty()) {
+                    doPoiSearch(tip.getName());
+//                    } else {
+//                        addTipMarker(tip);
+//                    }
                     break;
             }
         }

@@ -115,6 +115,16 @@
                 android:layout_toRightOf="@id/car_status"
                 android:textColor="@color/color_primary_blue" />
 
+
+            <TextView
+                android:id="@+id/request_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/car_status"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/tow_car_position"
+                android:textColor="@color/color_primary_blue" />
+
             <TextView
                 android:id="@+id/accident_id_str"
                 android:layout_width="wrap_content"
@@ -439,11 +449,10 @@
                 android:textColor="@color/black" />
 
             <android.support.v7.widget.RecyclerView
-                android:layout_below="@id/pic_str"
-                android:layout_margin="@dimen/template_item_padding"
                 android:id="@+id/imgs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pic_str" />
 
 
         </RelativeLayout>

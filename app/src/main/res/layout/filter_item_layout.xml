@@ -11,5 +11,6 @@
         android:layout_margin="10dp"
         android:background="@drawable/filter_item_bkg"
         android:gravity="center"
-        android:textColor="@color/white" />
+        android:textSize="@dimen/filter_tab_text_size"
+        android:textColor="@color/black" />
 </LinearLayout>
