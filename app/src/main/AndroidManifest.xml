@@ -63,6 +63,7 @@
         <activity
             android:name=".view_controller.police.Ac_record_editor"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        
         <activity android:name=".view_controller.police.Ac_request_detail" />
         <activity android:name=".view_controller.police.Ac_approval_detail" />
         <activity android:name=".view_controller.police.Ac_force_certi_list" />
@@ -73,6 +74,9 @@
             android:launchMode="singleTask" />
         <activity android:name=".view_controller.tow_car.Ac_task_list" />
         <activity android:name=".view_controller.police.Ac_tow_car_position" />
+
+        <activity android:name="com.amap.api.maps.offlinemap.OfflineMapActivity"
+            android:screenOrientation="portrait"  />
     </application>
 
 </manifest>

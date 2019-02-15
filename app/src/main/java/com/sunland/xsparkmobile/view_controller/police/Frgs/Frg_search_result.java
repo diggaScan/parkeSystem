@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sunland.xsparkmobile.Bean.CarStatus;
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.Utils.Rv_Item_decoration;
 import com.sunland.xsparkmobile.view_controller.Ac_base;
@@ -64,7 +65,6 @@ public class Frg_search_result extends Fragment {
         dataSet.add(new CarStatus(11));
         dataSet.add(new CarStatus(11));
         car_info_list_adapter = new Car_info_list_adapter(mContext, dataSet);
-
         car_info_list_adapter.setOnItemClickedListener(new Car_info_list_adapter.OnItemClickedListener() {
             @Override
             public void onClick(int position) {

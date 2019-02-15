@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/banner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="最新审批信息"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/banner_title_size" />
+
+    <TextView
+        android:id="@+id/banner_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_title"
+        android:layout_alignLeft="@id/banner_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/banner_content_size" />
+</RelativeLayout>
+

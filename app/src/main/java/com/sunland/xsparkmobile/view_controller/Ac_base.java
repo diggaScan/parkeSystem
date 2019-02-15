@@ -3,6 +3,7 @@ package com.sunland.xsparkmobile.view_controller;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.amap.api.maps.MapsInitializer;
 import com.sunland.xsparkmobile.R;
 import com.sunland.xsparkmobile.Utils.DialogUtils;
 import com.sunland.xsparkmobile.Utils.DialogUtils2;
@@ -58,6 +60,8 @@ public class Ac_base extends AppCompatActivity {
         layoutInflater = getLayoutInflater();
         dialogUtils = DialogUtils.getInstance();
         dialogUtils2 = DialogUtils2.getInstance();
+
+        MapsInitializer.sdcardDir = Environment.getExternalStorageDirectory() + "/amapOfflineMap";
     }
 
     public void setContentLayout(int layout) {

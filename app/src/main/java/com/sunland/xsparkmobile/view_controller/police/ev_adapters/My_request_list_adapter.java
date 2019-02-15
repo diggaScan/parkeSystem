@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.sunland.xsparkmobile.Bean.Request;
 import com.sunland.xsparkmobile.R;
 
 import java.util.List;
@@ -26,7 +27,6 @@ public class My_request_list_adapter extends RecyclerView.Adapter<My_request_lis
         this.context = context;
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-
 
     public void setOnItemClickedListener(Car_info_list_adapter.OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;

@@ -7,17 +7,21 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sunland.xsparkmobile.GlideApp;
 import com.sunland.xsparkmobile.R;
+import com.sunland.xsparkmobile.customView.FuzzLayout;
 import com.sunland.xsparkmobile.view_controller.Ac_base;
+import com.sunland.xsparkmobile.view_controller.police.ev_adapters.Ac_function_banner_adapter;
 import com.sunland.xsparkmobile.view_controller.police.ev_adapters.Ac_function_rv_adapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -28,10 +32,15 @@ public class Ac_functions extends Ac_base {
     @BindView(R.id.functions)
     public RecyclerView rv__functions;
 
-    @BindView(R.id.banner_content)
-    public TextView tv_banner_content;
+    @BindView(R.id.rv_banner)
+    public RecyclerView rv_banner;
 
-    private int backPressed_num=0;
+    @BindView(R.id.fuzz)
+    public FuzzLayout fz_fuzz;
+    private int backPressed_num = 0;
+
+    private List<String> banner_dataset;
+    private Ac_function_banner_adapter ac_function_banner_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,10 +91,24 @@ public class Ac_functions extends Ac_base {
         rv__functions.setLayoutManager(manager);
         rv__functions.setAdapter(adapter);
 
-        // TODO: 2019/1/18/018 debug content
-        String debug_content = "暂扣车辆" + "<font color=\"#ff884d\">  浙AE1789  </font>"
-                + "放行申请 " + "<font color=\"#00e600\">   已通过  </font>";
-        tv_banner_content.setText(Html.fromHtml(debug_content));
+        banner_dataset = new ArrayList<>();
+        banner_dataset.add("one");
+        banner_dataset.add("two");
+        banner_dataset.add("three");
+        banner_dataset.add("four");
+        banner_dataset.add("five");
+        banner_dataset.add("six");
+
+        ac_function_banner_adapter = new Ac_function_banner_adapter(this, banner_dataset);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
+        rv_banner.setLayoutManager(llm);
+        rv_banner.setAdapter(ac_function_banner_adapter);
+
+        // TODO: 2019/2/14/014 后期需根据推送设置具体位置 
+        fz_fuzz.setInit_pos(0);
+        fz_fuzz.setItem_count(ac_function_banner_adapter.getItemCount());
+        fz_fuzz.setmRvView(rv_banner);
     }
 
     @Override

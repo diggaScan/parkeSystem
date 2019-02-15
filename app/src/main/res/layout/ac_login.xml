@@ -72,6 +72,14 @@
                     android:layout_marginTop="16dp"
                     android:text="登录"
                     android:textStyle="bold" />
+                <Button
+                    android:id="@+id/map_download"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="离线地图下载"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

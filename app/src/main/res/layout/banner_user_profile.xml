@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/name_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/profile_pic"
+        android:layout_toRightOf="@id/profile_pic"
+        android:text="警员:"
+        android:textColor="@color/light_black" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/name_str"
+        android:layout_toRightOf="@id/name_str"
+        android:text="王建国"
+        android:textColor="@color/light_black" />
+
+    <TextView
+        android:id="@+id/pid_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/profile_pic"
+        android:layout_toRightOf="@id/profile_pic"
+        android:text="警号:"
+        android:textColor="@color/light_black" />
+
+    <TextView
+        android:id="@+id/pid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/pid_str"
+        android:layout_toRightOf="@id/pid_str"
+        android:text="127012"
+        android:textColor="@color/light_black" />
+
+</RelativeLayout>

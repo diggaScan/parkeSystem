@@ -13,5 +13,7 @@ public class V_Config {
     public static final int GOOGLE_COLOR_THREE = 2;
     public static final int GOOGLE_COLOR_FOUR = 3;
 
+    public static final String URL_SP="URL_SP";
+
 
 }
